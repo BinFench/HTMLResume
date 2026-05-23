@@ -1,183 +1,312 @@
-html {
-  background-color: white;
-  padding-top: 10px;
+/* ============================================
+   Resume — Ben Finch
+   ============================================ */
+
+:root {
+	--accent: #3ea0f0;
+	--accent-dark: #2178c4;
+	--text: #2a2e36;
+	--text-muted: #6b7480;
+	--rule: #d4dae3;
+	--surface: white;
 }
 
 * {
-  margin: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-p {
-  font-family: "Calibri";
+html {
+	background-color: var(--surface);
 }
 
-h1 {
-  line-height: 0.7;
-  margin-bottom: 15px;
-  font-size: 50px;
+body {
+	font-family: "Calibri", "Carlito", "Segoe UI", Arial, sans-serif;
+	font-size: 10.5pt;
+	line-height: 1.4;
+	color: var(--text);
+	background: var(--surface);
 }
 
 #Page {
-  #width: 38%;
-  #position: absolute;
-  #left: 31%;
-  #padding: 42px;
-  background-color: white;
+	max-width: 8.5in;
+	margin: 0 auto;
+	padding: 0.45in 0.55in;
+	background-color: var(--surface);
 }
 
-#Contact {
-  #background-color: #3ea0f0;
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  padding: 5px;
-  border-style: solid;
-  border-color: #3ea0f0;
-  background-color: white;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#Introduction {
-  padding-top: 5px;
-  padding-left: 5px;
-  border-style: solid;
-  border-color: #3ea0f0;
-  width: 80%;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-}
+/* ---------- Typography ---------- */
 
 h1 {
-  #color: #3ea0f0;
-  font-family: "Rockwell";
+	font-family: "Rockwell", "Rockwell Std", "Cambria", "Georgia", serif;
+	font-size: 34pt;
+	line-height: 1.0;
+	color: var(--text);
+	letter-spacing: -0.5px;
 }
 
 h2 {
-  font-family: "Rockwell";
+	font-family: "Rockwell", "Rockwell Std", "Cambria", "Georgia", serif;
+	font-size: 13pt;
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin-top: 14px;
+	margin-bottom: 8px;
+	padding-bottom: 3px;
+	border-bottom: 1.5px solid var(--accent);
 }
 
-i {
-  color: #3ea0f0;
+h3 {
+	font-family: "Calibri", "Carlito", Arial, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: var(--text);
 }
 
-#Cred {
-  padding-top: 5px;
-  width: 60%;
+p {
+	font-size: 10.5pt;
 }
 
-#Intro {
-  padding-top: 10px;
-  padding-bottom: 5px;
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
-#JobTitle {
-  color: #474e59;
+a:hover {
+	text-decoration: underline;
 }
 
-#JobItem {
-  color: #3ea0f0;
+ul {
+	list-style: none;
 }
 
-#SkillIntro {
-  padding-top: 10px;
-  margin-bottom: 5px;
+/* ---------- Icons ---------- */
+
+i[aria-hidden] {
+	color: var(--accent);
+	width: 16px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 2px;
 }
 
-#JobIntro {
-  padding-top: 10px;
-  margin-bottom: 5px;
+/* ---------- Header ---------- */
+
+#ResumeHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 24px;
+	padding-bottom: 8px;
+	margin-bottom: 4px;
 }
 
-#SkillTitle {
-  text-align: center;
-  padding-bottom: 5px;
-  background-color: #3ea0f0;
+#NameBlock {
+	flex: 1 1 auto;
 }
 
-#SkillDesc {
-  margin-left: 5px;
-  margin-right: 5px;
+#Location {
+	color: var(--text-muted);
+	font-size: 10pt;
+	margin-top: 4px;
+	font-style: normal;
 }
 
-#Web {
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-  #padding: 5px;
-  padding-bottom: 5px;
-  margin: 5px;
-  #width: 95%;
-  #position: relative;
-  #top: 0%;
-  #left: 0%;
-  #background-color: #3ea0f0;
-  border-style: solid;
-  border-color: #3ea0f0;
-  background-color: white;
+address {
+	font-style: normal;
 }
 
-#MachineLearning {
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-  #padding: 5px;
-  padding-bottom: 5px;
-  margin: 5px;
-  #width: 80%;
-  #position: relative;
-  #top: 20%;
-  #left: 10%;
-  #background-color: #3ea0f0;
-  border-style: solid;
-  border-color: #3ea0f0;
-  background-color: white;
+#ContactList {
+	font-size: 9.5pt;
+	text-align: right;
+	line-height: 1.55;
 }
 
-#Software {
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-  #padding: 5px;
-  padding-bottom: 5px;
-  margin: 5px;
-  #width: 80%;
-  #position: relative;
-  #top: 40%;
-  #left: 5%;
-  #background-color: #3ea0f0;
-  border-style: solid;
-  border-color: #3ea0f0;
-  background-color: white;
+#ContactList li {
+	white-space: nowrap;
 }
 
-#Controls {
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-  #padding: 5px;
-  padding-bottom: 5px;
-  margin: 5px;
-  #width: 80%;
-  #position: relative;
-  #top: 60%;
-  #left: 10%;
-  #background-color: #3ea0f0;
-  border-style: solid;
-  border-color: #3ea0f0;
-  background-color: white;
+#ContactList a {
+	color: var(--text);
 }
 
-#Hardware {
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-  #padding: 5px;
-  padding-bottom: 5px;
-  margin: 5px;
-  #width: 95%;
-  #position: relative;
-  #top: 80%;
-  #left: 0%;
-  #background-color: #3ea0f0;
-  border-style: solid;
-  border-color: #3ea0f0;
-  background-color: white;
+/* ---------- Body box treatment ---------- */
+
+#Summary,
+.job,
+.entry,
+.skills-list,
+.projects-list {
+	padding: 8px 12px;
+	border-left: 3px solid var(--accent);
+	background: #f6fafd;
 }
 
-#Worktime {
-  color: #8fa2bd;
+#Summary {
+	margin-bottom: 4px;
 }
 
-#Wifi {
-  font-size: 13px;
-  margin-right: 2px;
+#Summary p {
+	font-size: 10.5pt;
+}
+
+/* ---------- Skills ---------- */
+
+.skills-list li {
+	padding: 2px 0;
+	font-size: 9.5pt;
+	color: var(--text-muted);
+}
+
+.skill-label {
+	color: var(--text);
+	font-weight: bold;
+	display: inline-block;
+	min-width: 130px;
+}
+
+/* ---------- Experience / Entries ---------- */
+
+.job,
+.entry {
+	margin-bottom: 12px;
+	break-inside: avoid-page;
+}
+
+.job:last-child,
+.entry:last-child {
+	margin-bottom: 4px;
+}
+
+.job-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 12px;
+	margin-bottom: 2px;
+}
+
+.job-title,
+.entry-title {
+	font-size: 11pt;
+	font-weight: bold;
+	color: var(--text);
+	flex: 1 1 auto;
+}
+
+.job-company {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+.job-meta {
+	color: var(--text-muted);
+	font-size: 9.5pt;
+	font-weight: normal;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.job-subnote {
+	color: var(--text-muted);
+	font-size: 9.5pt;
+	font-style: italic;
+	margin-bottom: 3px;
+}
+
+.job-bullets {
+	margin: 3px 0 4px 0;
+}
+
+.job-bullets li {
+	margin-bottom: 2px;
+	font-size: 10pt;
+	padding-left: 14px;
+	text-indent: -14px;
+	line-height: 1.35;
+}
+
+.job-bullets li::before {
+	content: "▸ ";
+	color: var(--accent);
+	font-weight: bold;
+}
+
+.job-tools {
+	font-size: 9.5pt;
+	color: var(--text-muted);
+	margin-top: 3px;
+}
+
+.tools-label {
+	color: var(--text);
+	font-weight: bold;
+}
+
+.entry-meta {
+	color: var(--text-muted);
+	font-size: 10pt;
+	margin-top: 1px;
+}
+
+/* ---------- Projects ---------- */
+
+.projects-list li {
+	font-size: 9.5pt;
+	color: var(--text-muted);
+	padding: 3px 0 3px 14px;
+	text-indent: -14px;
+	line-height: 1.35;
+}
+
+.projects-list li::before {
+	content: "▸ ";
+	color: var(--accent);
+	font-weight: bold;
+}
+
+.project-title {
+	color: var(--text);
+	font-weight: bold;
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+	body {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	#Page {
+		max-width: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.job,
+	.entry {
+		break-inside: avoid-page;
+	}
+
+	h2 {
+		break-after: avoid-page;
+	}
+
+	.job-header,
+	.job-title {
+		break-after: avoid-page;
+	}
+}
+
+@page {
+	size: letter;
+	margin: 0.5in 0.55in;
 }
